@@ -1,0 +1,24 @@
+From eae91b045c35f2831e2daa79b1d88ae2a0079ceb Mon Sep 17 00:00:00 2001
+From: Casper Haems <casper.haems@ugent.be>
+Date: Fri, 19 Jul 2024 16:33:17 +0200
+Subject: [PATCH] Change: hardcode i_pic_init_qp to 26 + QP_BD_OFFSET
+
+---
+ encoder/set.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/encoder/set.c b/encoder/set.c
+index 1d8004bf..f9cc8a41 100644
+--- a/encoder/set.c
++++ b/encoder/set.c
+@@ -492,6 +492,7 @@ void x264_pps_init( x264_pps_t *pps, int i_id, x264_param_t *param, x264_sps_t *
+     pps->b_weighted_bipred = param->analyse.b_weighted_bipred ? 2 : 0;
+ 
+     pps->i_pic_init_qp = param->rc.i_rc_method == X264_RC_ABR || param->b_stitchable ? 26 + QP_BD_OFFSET : SPEC_QP( param->rc.i_qp_constant );
++	pps->i_pic_init_qp = 26 + QP_BD_OFFSET;
+     pps->i_pic_init_qs = 26 + QP_BD_OFFSET;
+ 
+     pps->i_chroma_qp_index_offset = param->analyse.i_chroma_qp_offset;
+-- 
+2.45.2.windows.1
+

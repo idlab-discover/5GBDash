@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<MPD mediaPresentationDuration="PT60S" minBufferTime="PT1S" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="dynamic" xmlns="urn:mpeg:dash:schema:mpd:2011" availabilityStartTime="2024-01-24T22:24:06Z" minimumUpdatePeriod="P60S">
+<Period start="PT0S">
+<BaseURL></BaseURL>
+<AdaptationSet segmentAlignment="true">
+<Representation audioSamplingRate="48000" bandwidth="546934" codecs="avc1.640028,mp4a.40.2" frameRate="25" height="176" id="1" mimeType="video/mp4" sar="1:1" startWithSAP="1" width="412">
+<SegmentTemplate duration="1" initialization="1/init_1.mp4" media="1/segment_$Number%04u$_1.mp4" startNumber="1"/>
+</Representation>
+<Representation audioSamplingRate="48000" bandwidth="1049183" codecs="avc1.640028,mp4a.40.2" frameRate="25" height="272" id="2" mimeType="video/mp4" sar="1:1" startWithSAP="1" width="640">
+<SegmentTemplate duration="1" initialization="2/init_2.mp4" media="2/segment_$Number%04u$_2.mp4" startNumber="1"/>
+</Representation>
+<Representation audioSamplingRate="48000" bandwidth="1926568" codecs="avc1.640028,mp4a.40.2" frameRate="25" height="408" id="3" mimeType="video/mp4" sar="1:1" startWithSAP="1" width="960">
+<SegmentTemplate duration="1" initialization="3/init_3.mp4" media="3/segment_$Number%04u$_3.mp4" startNumber="1"/>
+</Representation>
+<Representation audioSamplingRate="48000" bandwidth="2834031" codecs="avc1.640028,mp4a.40.2" frameRate="25" height="544" id="4" mimeType="video/mp4" sar="1:1" startWithSAP="1" width="1280">
+<SegmentTemplate duration="1" initialization="4/init_4.mp4" media="4/segment_$Number%04u$_4.mp4" startNumber="1"/>
+</Representation>
+<Representation audioSamplingRate="48000" bandwidth="5216461" codecs="avc1.640028,mp4a.40.2" frameRate="25" height="816" id="5" mimeType="video/mp4" sar="1:1" startWithSAP="1" width="1920">
+<SegmentTemplate duration="1" initialization="5/init_5.mp4" media="5/segment_$Number%04u$_5.mp4" startNumber="1"/>
+</Representation>
+</AdaptationSet>
+</Period>
+</MPD>

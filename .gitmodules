@@ -1,0 +1,6 @@
+[submodule "raptor"]
+	path = flute/external/raptor
+	url = https://github.com/SteezyE/raptor.git
+[submodule "flute/external/tracy"]
+	path = flute/external/tracy
+	url = https://github.com/wolfpld/tracy.git

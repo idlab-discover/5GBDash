@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dash.js</title>
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+        <style>
+            video {
+               width: 1280px;
+               height: 720px;
+            }
+        </style>
+        <script src="/dash.js"></script>
+        <script src="/script.js"></script>
+    </head>
+    <body>
+	    <div id="video-wrapper">
+            <video id="video" preload="none" controls="true"></video>
+        </div>
+        <div id="metrics">
+            <p id="live-latency"></p>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", (event) => {
+                start();
+            });
+        </script>
+    </body>
+</html>

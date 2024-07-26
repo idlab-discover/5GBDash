@@ -1,0 +1,246 @@
+From: Chow Loong Jin <hyperair@debian.org>
+Date: Thu, 26 Mar 2020 17:48:28 +0800
+Subject: [PATCH] Set visibility to hidden for private functions
+
+Exceptions made for private functions that are called from inline functions that
+are defined in the header.
+---
+ tinyxml2.h | 95 ++++++++++++++++++++++++++++++++------------------------------
+ 1 file changed, 49 insertions(+), 46 deletions(-)
+
+diff --git a/tinyxml2.h b/tinyxml2.h
+index 05848da..ddd84e8 100755
+--- a/tinyxml2.h
++++ b/tinyxml2.h
+@@ -65,6 +65,7 @@ distribution.
+ #endif
+ 
+ #ifdef _WIN32
++#   define TINYXML2_PRIVATE
+ #   ifdef TINYXML2_EXPORT
+ #       define TINYXML2_LIB __declspec(dllexport)
+ #   elif defined(TINYXML2_IMPORT)
+@@ -74,8 +75,10 @@ distribution.
+ #   endif
+ #elif __GNUC__ >= 4
+ #   define TINYXML2_LIB __attribute__((visibility("default")))
++#   define TINYXML2_PRIVATE __attribute__((visibility("hidden")))
+ #else
+ #   define TINYXML2_LIB
++#   define TINYXML2_PRIVATE
+ #endif
+ 
+ 
+@@ -181,7 +184,7 @@ public:
+ 	void Reset();
+ 
+ private:
+-    void CollapseWhitespace();
++    TINYXML2_PRIVATE void CollapseWhitespace();
+ 
+     enum {
+         NEEDS_FLUSH = 0x100,
+@@ -192,8 +195,8 @@ private:
+     char*   _start;
+     char*   _end;
+ 
+-    StrPair( const StrPair& other );	// not supported
+-    void operator=( const StrPair& other );	// not supported, use TransferTo()
++    TINYXML2_PRIVATE StrPair( const StrPair& other );	// not supported
++    TINYXML2_PRIVATE void operator=( const StrPair& other );	// not supported, use TransferTo()
+ };
+ 
+ 
+@@ -297,10 +300,10 @@ public:
+     }
+ 
+ private:
+-    DynArray( const DynArray& ); // not supported
+-    void operator=( const DynArray& ); // not supported
++    TINYXML2_PRIVATE DynArray( const DynArray& ); // not supported
++    TINYXML2_PRIVATE void operator=( const DynArray& ); // not supported
+ 
+-    void EnsureCapacity( int cap ) {
++    TINYXML2_PRIVATE void EnsureCapacity( int cap ) {
+         TIXMLASSERT( cap > 0 );
+         if ( cap > _allocated ) {
+             TIXMLASSERT( cap <= INT_MAX / 2 );
+@@ -438,8 +441,8 @@ public:
+     enum { ITEMS_PER_BLOCK = (4 * 1024) / ITEM_SIZE };
+ 
+ private:
+-    MemPoolT( const MemPoolT& ); // not supported
+-    void operator=( const MemPoolT& ); // not supported
++    TINYXML2_PRIVATE MemPoolT( const MemPoolT& ); // not supported
++    TINYXML2_PRIVATE void operator=( const MemPoolT& ); // not supported
+ 
+     union Item {
+         Item*   next;
+@@ -966,13 +969,13 @@ protected:
+ 
+ private:
+     MemPool*		_memPool;
+-    void Unlink( XMLNode* child );
+-    static void DeleteNode( XMLNode* node );
+-    void InsertChildPreamble( XMLNode* insertThis ) const;
+-    const XMLElement* ToElementWithName( const char* name ) const;
++    TINYXML2_PRIVATE void Unlink( XMLNode* child );
++    TINYXML2_PRIVATE static void DeleteNode( XMLNode* node );
++    TINYXML2_PRIVATE void InsertChildPreamble( XMLNode* insertThis ) const;
++    TINYXML2_PRIVATE const XMLElement* ToElementWithName( const char* name ) const;
+ 
+-    XMLNode( const XMLNode& );	// not supported
+-    XMLNode& operator=( const XMLNode& );	// not supported
++    TINYXML2_PRIVATE XMLNode( const XMLNode& );	// not supported
++    TINYXML2_PRIVATE XMLNode& operator=( const XMLNode& );	// not supported
+ };
+ 
+ 
+@@ -1022,8 +1025,8 @@ protected:
+ private:
+     bool _isCData;
+ 
+-    XMLText( const XMLText& );	// not supported
+-    XMLText& operator=( const XMLText& );	// not supported
++    TINYXML2_PRIVATE XMLText( const XMLText& );	// not supported
++    TINYXML2_PRIVATE XMLText& operator=( const XMLText& );	// not supported
+ };
+ 
+ 
+@@ -1051,8 +1054,8 @@ protected:
+     char* ParseDeep( char* p, StrPair* parentEndTag, int* curLineNumPtr);
+ 
+ private:
+-    XMLComment( const XMLComment& );	// not supported
+-    XMLComment& operator=( const XMLComment& );	// not supported
++    TINYXML2_PRIVATE XMLComment( const XMLComment& );	// not supported
++    TINYXML2_PRIVATE XMLComment& operator=( const XMLComment& );	// not supported
+ };
+ 
+ 
+@@ -1090,8 +1093,8 @@ protected:
+     char* ParseDeep( char* p, StrPair* parentEndTag, int* curLineNumPtr );
+ 
+ private:
+-    XMLDeclaration( const XMLDeclaration& );	// not supported
+-    XMLDeclaration& operator=( const XMLDeclaration& );	// not supported
++    TINYXML2_PRIVATE XMLDeclaration( const XMLDeclaration& );	// not supported
++    TINYXML2_PRIVATE XMLDeclaration& operator=( const XMLDeclaration& );	// not supported
+ };
+ 
+ 
+@@ -1125,8 +1128,8 @@ protected:
+     char* ParseDeep( char* p, StrPair* parentEndTag, int* curLineNumPtr );
+ 
+ private:
+-    XMLUnknown( const XMLUnknown& );	// not supported
+-    XMLUnknown& operator=( const XMLUnknown& );	// not supported
++    TINYXML2_PRIVATE XMLUnknown( const XMLUnknown& );	// not supported
++    TINYXML2_PRIVATE XMLUnknown& operator=( const XMLUnknown& );	// not supported
+ };
+ 
+ 
+@@ -1240,14 +1243,14 @@ public:
+ private:
+     enum { BUF_SIZE = 200 };
+ 
+-    XMLAttribute() : _name(), _value(),_parseLineNum( 0 ), _next( 0 ), _memPool( 0 ) {}
+-    virtual ~XMLAttribute()	{}
++    TINYXML2_PRIVATE XMLAttribute() : _name(), _value(),_parseLineNum( 0 ), _next( 0 ), _memPool( 0 ) {}
++    TINYXML2_PRIVATE virtual ~XMLAttribute()	{}
+ 
+-    XMLAttribute( const XMLAttribute& );	// not supported
+-    void operator=( const XMLAttribute& );	// not supported
+-    void SetName( const char* name );
++    TINYXML2_PRIVATE XMLAttribute( const XMLAttribute& );	// not supported
++    TINYXML2_PRIVATE void operator=( const XMLAttribute& );	// not supported
++    TINYXML2_PRIVATE void SetName( const char* name );
+ 
+-    char* ParseDeep( char* p, bool processEntities, int* curLineNumPtr );
++    TINYXML2_PRIVATE char* ParseDeep( char* p, bool processEntities, int* curLineNumPtr );
+ 
+     mutable StrPair _name;
+     mutable StrPair _value;
+@@ -1683,15 +1686,15 @@ protected:
+     char* ParseDeep( char* p, StrPair* parentEndTag, int* curLineNumPtr );
+ 
+ private:
+-    XMLElement( XMLDocument* doc );
+-    virtual ~XMLElement();
+-    XMLElement( const XMLElement& );	// not supported
+-    void operator=( const XMLElement& );	// not supported
++    TINYXML2_PRIVATE XMLElement( XMLDocument* doc );
++    TINYXML2_PRIVATE virtual ~XMLElement();
++    TINYXML2_PRIVATE XMLElement( const XMLElement& );	// not supported
++    TINYXML2_PRIVATE void operator=( const XMLElement& );	// not supported
+ 
+     XMLAttribute* FindOrCreateAttribute( const char* name );
+-    char* ParseAttributes( char* p, int* curLineNumPtr );
+-    static void DeleteAttribute( XMLAttribute* attribute );
+-    XMLAttribute* CreateAttribute();
++    TINYXML2_PRIVATE char* ParseAttributes( char* p, int* curLineNumPtr );
++    TINYXML2_PRIVATE static void DeleteAttribute( XMLAttribute* attribute );
++    TINYXML2_PRIVATE XMLAttribute* CreateAttribute();
+ 
+     enum { BUF_SIZE = 200 };
+     ElementClosingType _closingType;
+@@ -1928,8 +1931,8 @@ public:
+     }
+ 
+ private:
+-    XMLDocument( const XMLDocument& );	// not supported
+-    void operator=( const XMLDocument& );	// not supported
++    TINYXML2_PRIVATE XMLDocument( const XMLDocument& );	// not supported
++    TINYXML2_PRIVATE void operator=( const XMLDocument& );	// not supported
+ 
+     bool			_writeBOM;
+     bool			_processEntities;
+@@ -1955,9 +1958,9 @@ private:
+ 
+ 	static const char* _errorNames[XML_ERROR_COUNT];
+ 
+-    void Parse();
++    TINYXML2_PRIVATE void Parse();
+ 
+-    void SetError( XMLError error, int lineNum, const char* format, ... );
++    TINYXML2_PRIVATE void SetError( XMLError error, int lineNum, const char* format, ... );
+ 
+ 	// Something of an obvious security hole, once it was discovered.
+ 	// Either an ill-formed XML or an excessively deep one can overflow
+@@ -1974,11 +1977,11 @@ private:
+ 	private:
+ 		XMLDocument * _document;
+ 	};
+-	void PushDepth();
+-	void PopDepth();
++	TINYXML2_PRIVATE void PushDepth();
++	TINYXML2_PRIVATE void PopDepth();
+ 
+     template<class NodeType, int PoolElementSize>
+-    NodeType* CreateUnlinkedNode( MemPoolT<PoolElementSize>& pool );
++    TINYXML2_PRIVATE NodeType* CreateUnlinkedNode( MemPoolT<PoolElementSize>& pool );
+ };
+ 
+ template<class NodeType, int PoolElementSize>
+@@ -2346,8 +2349,8 @@ private:
+        Prepares to write a new node. This includes sealing an element that was
+        just opened, and writing any whitespace necessary if not in compact mode.
+      */
+-    void PrepareForNewNode( bool compactMode );
+-    void PrintString( const char*, bool restrictedEntitySet );	// prints out, after detecting entities.
++    TINYXML2_PRIVATE void PrepareForNewNode( bool compactMode );
++    TINYXML2_PRIVATE void PrintString( const char*, bool restrictedEntitySet );	// prints out, after detecting entities.
+ 
+     bool _firstElement;
+     FILE* _fp;
+@@ -2366,8 +2369,8 @@ private:
+     DynArray< char, 20 > _buffer;
+ 
+     // Prohibit cloning, intentionally not implemented
+-    XMLPrinter( const XMLPrinter& );
+-    XMLPrinter& operator=( const XMLPrinter& );
++     TINYXML2_PRIVATE XMLPrinter( const XMLPrinter& );
++     TINYXML2_PRIVATE XMLPrinter& operator=( const XMLPrinter& );
+ };
+ 
+ 

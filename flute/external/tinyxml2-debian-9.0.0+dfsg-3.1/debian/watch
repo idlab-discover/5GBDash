@@ -1,0 +1,4 @@
+version=3
+
+opts="filenamemangle=s/(?:.*)?v?(\d[\d\.]*)\.tar\.gz/tinyxml2-$1.tar.gz/,dversionmangle=s/\+dfsg(\.\d+)?$//,repacksuffix=+dfsg" \
+https://github.com/leethomason/tinyxml2/tags (?:.*/)?v?(\d[\d\.]*)\.tar\.gz

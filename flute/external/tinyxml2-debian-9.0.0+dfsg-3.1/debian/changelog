@@ -1,0 +1,243 @@
+tinyxml2 (9.0.0+dfsg-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Install cmake files (Closes: #967045)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Mon, 16 May 2022 11:14:34 +0200
+
+tinyxml2 (9.0.0+dfsg-3) unstable; urgency=medium
+
+  * [a6e98f0] Drop Provides/Conflicts libtinyxml2-8 (Closes: #992602)
+
+ -- Chow Loong Jin <hyperair@debian.org>  Sat, 21 Aug 2021 22:50:44 +0800
+
+tinyxml2 (9.0.0+dfsg-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Chow Loong Jin <hyperair@debian.org>  Fri, 20 Aug 2021 19:22:15 +0800
+
+tinyxml2 (9.0.0+dfsg-1) experimental; urgency=medium
+
+  * [1915c59] New upstream version 9.0.0+dfsg
+  * [7afaa6f] Update package name and symbols file for soname bump
+
+ -- Chow Loong Jin <hyperair@debian.org>  Tue, 08 Jun 2021 01:24:52 +0800
+
+tinyxml2 (8.1.0+really8.1.0+dfsg-1) experimental; urgency=medium
+
+  * [565d5af] New upstream version 8.1.0+really8.1.0+dfsg
+  * [5efb233] Revert debian/* to the state at 8.1.0+dfsg-2
+  * [43398c1] Amend version for the new symbol introduced in 8.1.0.
+    Since 8.1.0 now precedes 8.1.0+really8.0.0, we need to bump this version to
+    get proper versioning.
+
+ -- Chow Loong Jin <hyperair@debian.org>  Sat, 05 Jun 2021 17:25:41 +0800
+
+tinyxml2 (8.1.0+really8.0.0+dfsg-1) unstable; urgency=medium
+
+  * [054e407] Revert to upstream version 8.0.0 due to abi break in 8.1.0
+  * [e68c25c] Revert debian/* to state at 8.0.0+dfsg-2
+
+ -- Chow Loong Jin <hyperair@debian.org>  Sat, 05 Jun 2021 16:53:02 +0800
+
+tinyxml2 (8.1.0+dfsg-2) experimental; urgency=medium
+
+  * [0c13ef0] Rename package for abi break (Closes: #988986)
+
+ -- Chow Loong Jin <hyperair@debian.org>  Tue, 01 Jun 2021 16:01:13 +0800
+
+tinyxml2 (8.1.0+dfsg-1) unstable; urgency=medium
+
+  * [6d141b5] New upstream version 8.1.0+dfsg
+  * [21e8389] Refresh patches and drop upstreamed ones
+  * [d119eea] Add option to build shared libs.
+    Seems to be opt-in now
+  * [ce08079] Update symbols file for new symbol
+
+ -- Chow Loong Jin <hyperair@debian.org>  Thu, 20 May 2021 01:16:05 +0800
+
+tinyxml2 (8.0.0+dfsg-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Chow Loong Jin <hyperair@debian.org>  Thu, 14 May 2020 11:34:35 +0800
+
+tinyxml2 (8.0.0+dfsg-1) experimental; urgency=medium
+
+  * [b3cd7aa] New upstream version 8.0.0+dfsg
+  * [d240940] Update package name for SONAME bump
+  * [cb5c220] Update symbols file
+  * [a54d3e9] Bump debhelper compat to 12
+  * [08758ba] Drop provides/conflicts of libtinyxml2-6
+  * [2a9c94c] Patch to fix first line indentation
+  * [4a376e3] Set visibility to hidden for private functions.
+    They're not going to be called outside the library anyway.
+  * [d9a2fb9] Drop private symbols from symbols file
+  * [48ab0ec] Reset symbol versions to 8.0.0.
+    We have a new ABI, no point sticking to the old versions
+
+ -- Chow Loong Jin <hyperair@debian.org>  Fri, 10 Apr 2020 22:04:35 +0800
+
+tinyxml2 (7.0.1+dfsg-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * [e3840d2] d/copyright: Use https protocol in Format field
+
+  [ Chow Loong Jin ]
+  * [ee81729] New upstream version 7.0.1+dfsg
+  * [7973939] Rename packages for new soname
+  * [a76573b] Add new symbols
+
+ -- Chow Loong Jin <hyperair@debian.org>  Fri, 28 Dec 2018 04:09:32 +0800
+
+tinyxml2 (7.0.0+dfsg-1) unstable; urgency=medium
+
+  * [8d89e51] New upstream version 7.0.0+dfsg
+
+ -- Chow Loong Jin <hyperair@debian.org>  Wed, 14 Nov 2018 11:38:27 +0800
+
+tinyxml2 (6.2.0+dfsg-3) unstable; urgency=medium
+
+  * [a9d33cd] Pass -B and -S flags directly to dh instead
+  * [beb4c14] Fix libtinyxml2-dev dependency on libtinyxml2-6a
+
+ -- Chow Loong Jin <hyperair@debian.org>  Sat, 04 Aug 2018 20:03:32 +0800
+
+tinyxml2 (6.2.0+dfsg-2) unstable; urgency=medium
+
+  * [7fdca1f] Rename package for abi break (Closes: #898535)
+
+ -- Chow Loong Jin <hyperair@debian.org>  Mon, 30 Jul 2018 01:28:33 +0800
+
+tinyxml2 (6.2.0+dfsg-1) unstable; urgency=medium
+
+  * [3010f8e] New upstream version 6.2.0+dfsg
+  * [ba30c86] Update symbols file with new symbols
+  * [6923f8b] Port to salsa
+
+ -- Chow Loong Jin <hyperair@debian.org>  Fri, 20 Apr 2018 02:15:00 +0800
+
+tinyxml2 (6.0.0+dfsg-1) unstable; urgency=medium
+
+  * [1dd1cea] Update symbols file
+  * [688061d] Sort symbols file
+  * [3fe600a] Change priority to optional
+    extra is deprecated
+  * [7738aec] Update Vcs-* fields to use https
+  * [fca650d] Bump Standards-Version to 4.1.3
+  * [fd8262b] Drop docs subdirectory (contains minified js files)
+  * [570fbbc] New upstream version 6.0.0+dfsg
+  * [ccac24b] New upstream version 6.0.0
+  * [8187a19] Rename packages for soname bump
+
+ -- Chow Loong Jin <hyperair@debian.org>  Wed, 10 Jan 2018 00:30:20 +0800
+
+tinyxml2 (5.0.1-1) unstable; urgency=medium
+
+  * [2013058] New upstream version 5.0.1
+  * [12350d1] Use dh_auto_test for tests
+  * [efc7bd2] Sort symbols file
+  * [08edab1] Add new symbols
+
+ -- Chow Loong Jin <hyperair@debian.org>  Fri, 30 Jun 2017 02:02:07 +0800
+
+tinyxml2 (5.0.0-1) unstable; urgency=medium
+
+  * [6fd276b] New upstream version 5.0.0
+  * [244028b] Drop upstreamed patches
+  * [79ec582] Force cmake build system
+    debhelper assumes normal Makefile due to the presence of a bare Makefile
+  * [4b13f1f] Rename package for soname bump
+  * [a8f2dd5] Update symbols file
+
+ -- Chow Loong Jin <hyperair@debian.org>  Thu, 22 Jun 2017 00:37:18 +0800
+
+tinyxml2 (4.0.1-1) unstable; urgency=medium
+
+  * [1f93ea0] Imported Upstream version 4.0.1
+  * [eab7bb3] Refresh patches
+  * [864825f] Fix segfault in test
+  * [3fabcc2] Rename packages for new soname
+  * [f15a244] Update symbols file
+  * [40b2bc9] Bump Standards-Version to 3.9.8
+  * [166c3f5] Make provisions for different int64_t types
+
+ -- Chow Loong Jin <hyperair@debian.org>  Sun, 14 Aug 2016 03:48:43 +0800
+
+tinyxml2 (3.0.0-2) unstable; urgency=medium
+
+  * [37d01ac] Fix inconsistent line endings in header.
+    This confuses emacs and makes it show the \r characters as ^M.
+    (Closes: #817046)
+  * [a60c31d] No-change bump of Standards-Version to 3.9.7
+
+ -- Chow Loong Jin <hyperair@debian.org>  Tue, 15 Mar 2016 04:15:44 +0800
+
+tinyxml2 (3.0.0-1) experimental; urgency=low
+
+  * [9496ce4] Imported Upstream version 2.3.0
+  * [c778438] Update patches
+  * [2489ff0] Drop -DBUILD_STATIC_LIBS=ON.
+    The option was dropped upstream.
+  * [e71af9e] Don't install static lib.
+    Removed upstream.
+  * [79e468b] Imported Upstream version 3.0.0
+  * [f0d815a] Rename package for ABI bump
+  * [802c41a] Bump version on new symbols and drop missing symbols.
+    Upstream re-released 2.3.0 as 3.0.0 for the ABI bump, so update the symbol
+    versions accordingly.
+  * [a2149e1] Bump Standards-Version to 3.9.6
+  * [054161c] Add Build-Conflicts on libssl1.0.0
+    cmake won't launch with this installed.
+  * [2704f0c] Mark vtable for tinyxml2::XMLVisitor optional.
+    This class has no non-inline virtual members, so the vtable only shows up
+    when built with noopt.
+
+ -- Chow Loong Jin <hyperair@debian.org>  Wed, 18 Mar 2015 10:18:23 +0800
+
+tinyxml2 (2.2.0-2) UNRELEASED; urgency=medium
+
+  * [16ea6e7] Import patch to fix nullptr dereference when printing malformed
+    entities (Closes: #780153)
+  * [0eb468f] Fix symbols file mismatch (Closes: #780156)
+  * [506efb9] Mark inlined symbols as optional
+
+ -- Chow Loong Jin <hyperair@debian.org>  Mon, 16 Mar 2015 15:44:48 +0800
+
+tinyxml2 (2.2.0-1) unstable; urgency=medium
+
+  * [ef813f9] Imported Upstream version 2.2.0
+  * [bb3c2ec] Add new symbols
+  * [1ab858d] Re-sort symbols file
+
+ -- Chow Loong Jin <hyperair@debian.org>  Sun, 21 Sep 2014 04:10:47 +0800
+
+tinyxml2 (2.1.0-1) unstable; urgency=medium
+
+  * [5db3612] Imported Upstream version 2.1.0
+
+ -- Chow Loong Jin <hyperair@debian.org>  Sun, 13 Apr 2014 21:34:21 +0800
+
+tinyxml2 (2.0.2-1) unstable; urgency=medium
+
+  * [92a3ede] Add debian/watch that looks at github tags.
+    Thanks to Octavio Alvarez
+  * [e03135c] Imported Upstream version 2.0.2 (Closes: #738700)
+  * [512de19] Renmae package for ABI change.
+    We now finally have a SOVERSION
+  * [82ad203] Drop patch -- applied upstream
+  * [ab15c6f] Add .symbols file since we have a SOVERSION now
+  * [9d6aa8f] Bump Standards-Version to 3.9.5 (no changes required)
+  * [b7e9f94] Build with -fvisibility to control symbol exporting
+  * [9e36237] Drop -DBUILD_SHARED_LIBS.
+    Obsolete option
+  * [f4bdfad] Pass -c4 to dpkg-gensymbols
+
+ -- Chow Loong Jin <hyperair@debian.org>  Thu, 20 Mar 2014 00:32:19 +0800
+
+tinyxml2 (0~git20120518.1.a2ae54e-1) unstable; urgency=low
+
+  * Initial release (Closes: #674074)
+
+ -- Chow Loong Jin <hyperair@debian.org>  Wed, 23 May 2012 02:54:30 +0800

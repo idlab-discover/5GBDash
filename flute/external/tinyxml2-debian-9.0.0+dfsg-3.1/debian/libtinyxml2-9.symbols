@@ -1,0 +1,230 @@
+libtinyxml2.so.9 libtinyxml2-9 #MINVER#
+ (c++|regex)"tinyxml2::XMLAttribute::QueryInt64Value\((long )?long\*\) const@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLAttribute::QueryUnsigned64Value\(unsigned (long )?long\*\) const@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLAttribute::SetAttribute\((long )?long\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLAttribute::SetAttribute\(unsigned (long )?long\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLDocument::Parse\(char const\*, unsigned (int|(long )?long)\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLElement::Int64Attribute\(char const\*, (long )?long\) const@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLElement::Int64Text\((long )?long\) const@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLElement::QueryInt64Text\((long )?long\*\) const@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLElement::QueryUnsigned64Text\(unsigned (long )?long\*\) const@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLElement::SetText\((long )?long\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLElement::SetText\(unsigned (long )?long\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLElement::Unsigned64Attribute\(char const\*, unsigned (long )?long\) const@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLElement::Unsigned64Text\(unsigned (long )?long\) const@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLPrinter::PushAttribute\(char const\*, (long )?long\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLPrinter::PushAttribute\(char const\*, unsigned (long )?long\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLPrinter::PushText\((long )?long\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLPrinter::PushText\(unsigned (long )?long\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLPrinter::Write\(char const\*, unsigned (int|long)\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLUtil::ToInt64\(char const\*, (long )?long\*\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLUtil::ToStr\((long )?long, char\*, int\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLUtil::ToStr\(unsigned (long )?long, char\*, int\)@Base" 8.0.0
+ (c++|regex)"tinyxml2::XMLUtil::ToUnsigned64\(char const\*, unsigned (long )?long\*\)@Base" 8.0.0
+ (c++)"tinyxml2::StrPair::GetStr()@Base" 8.0.0
+ (c++)"tinyxml2::StrPair::ParseName(char*)@Base" 8.0.0
+ (c++)"tinyxml2::StrPair::ParseText(char*, char const*, int, int*)@Base" 8.0.0
+ (c++)"tinyxml2::StrPair::Reset()@Base" 8.0.0
+ (c++)"tinyxml2::StrPair::SetStr(char const*, int)@Base" 8.0.0
+ (c++)"tinyxml2::StrPair::~StrPair()@Base" 8.0.0
+ (c++)"tinyxml2::StrPair::~StrPair()@Base" 8.0.0
+ (c++)"tinyxml2::StrPair::TransferTo(tinyxml2::StrPair*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::Name() const@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::QueryBoolValue(bool*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::QueryDoubleValue(double*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::QueryFloatValue(float*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::QueryIntValue(int*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::QueryUnsignedValue(unsigned int*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::SetAttribute(bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::SetAttribute(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::SetAttribute(double)@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::SetAttribute(float)@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::SetAttribute(int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::SetAttribute(unsigned int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLAttribute::Value() const@Base" 8.0.0
+ (c++)"tinyxml2::XMLComment::Accept(tinyxml2::XMLVisitor*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLComment::ParseDeep(char*, tinyxml2::StrPair*, int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLComment::ShallowClone(tinyxml2::XMLDocument*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLComment::ShallowEqual(tinyxml2::XMLNode const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLComment::~XMLComment()@Base" 8.0.0
+ (c++)"tinyxml2::XMLComment::~XMLComment()@Base" 8.0.0
+ (c++)"tinyxml2::XMLComment::~XMLComment()@Base" 8.0.0
+ (c++)"tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDeclaration::Accept(tinyxml2::XMLVisitor*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLDeclaration::ParseDeep(char*, tinyxml2::StrPair*, int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDeclaration::ShallowClone(tinyxml2::XMLDocument*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLDeclaration::ShallowEqual(tinyxml2::XMLNode const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLDeclaration::~XMLDeclaration()@Base" 8.0.0
+ (c++)"tinyxml2::XMLDeclaration::~XMLDeclaration()@Base" 8.0.0
+ (c++)"tinyxml2::XMLDeclaration::~XMLDeclaration()@Base" 8.0.0
+ (c++)"tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::Accept(tinyxml2::XMLVisitor*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::Clear()@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::ClearError()@Base" 8.1.0+really8.1.0
+ (c++)"tinyxml2::XMLDocument::DeepCopy(tinyxml2::XMLDocument*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::DeleteNode(tinyxml2::XMLNode*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::ErrorIDToName(tinyxml2::XMLError)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::ErrorName() const@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::_errorNames@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::ErrorStr() const@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::Identify(char*, tinyxml2::XMLNode**)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::LoadFile(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::LoadFile(_IO_FILE*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::MarkInUse(tinyxml2::XMLNode const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::NewComment(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::NewDeclaration(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::NewElement(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::NewText(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::NewUnknown(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::PrintError() const@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::Print(tinyxml2::XMLPrinter*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::SaveFile(char const*, bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::SaveFile(_IO_FILE*, bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::~XMLDocument()@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::~XMLDocument()@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::~XMLDocument()@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)@Base" 8.0.0
+ (c++)"tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::Accept(tinyxml2::XMLVisitor*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::Attribute(char const*, char const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::BoolAttribute(char const*, bool) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::BoolText(bool) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::DeleteAttribute(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::DoubleAttribute(char const*, double) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::DoubleText(double) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::FindAttribute(char const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::FindOrCreateAttribute(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::FloatAttribute(char const*, float) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::FloatText(float) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::GetText() const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::InsertNewChildElement(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::InsertNewComment(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::InsertNewDeclaration(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::InsertNewText(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::InsertNewUnknown(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::IntAttribute(char const*, int) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::IntText(int) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::ParseDeep(char*, tinyxml2::StrPair*, int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::QueryBoolText(bool*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::QueryDoubleText(double*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::QueryFloatText(float*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::QueryIntText(int*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::QueryUnsignedText(unsigned int*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::SetText(bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::SetText(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::SetText(double)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::SetText(float)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::SetText(int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::SetText(unsigned int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::ShallowClone(tinyxml2::XMLDocument*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::ShallowEqual(tinyxml2::XMLNode const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::UnsignedAttribute(char const*, unsigned int) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLElement::UnsignedText(unsigned int) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::DeepClone(tinyxml2::XMLDocument*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::DeleteChildren()@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::DeleteChild(tinyxml2::XMLNode*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::FirstChildElement(char const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::InsertAfterChild(tinyxml2::XMLNode*, tinyxml2::XMLNode*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::InsertEndChild(tinyxml2::XMLNode*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::InsertFirstChild(tinyxml2::XMLNode*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::LastChildElement(char const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::NextSiblingElement(char const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::ParseDeep(char*, tinyxml2::StrPair*, int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::PreviousSiblingElement(char const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::SetValue(char const*, bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::Value() const@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::~XMLNode()@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::~XMLNode()@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::~XMLNode()@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::CloseElement(bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::OpenElement(char const*, bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::Print(char const*, ...)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PrintSpace(int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushAttribute(char const*, bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushAttribute(char const*, char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushAttribute(char const*, double)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushAttribute(char const*, int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushComment(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushDeclaration(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushHeader(bool, bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushText(bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushText(char const*, bool)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushText(double)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushText(float)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushText(int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushText(unsigned int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::PushUnknown(char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::Putc(char)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::SealElementIfJustOpened()@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLDocument const&)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLElement const&, tinyxml2::XMLAttribute const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLElement const&)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::Visit(tinyxml2::XMLComment const&)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::Visit(tinyxml2::XMLDeclaration const&)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::Visit(tinyxml2::XMLText const&)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::Visit(tinyxml2::XMLUnknown const&)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLText::Accept(tinyxml2::XMLVisitor*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLText::ParseDeep(char*, tinyxml2::StrPair*, int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLText::ShallowClone(tinyxml2::XMLDocument*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLText::ShallowEqual(tinyxml2::XMLNode const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLUnknown::Accept(tinyxml2::XMLVisitor*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLUnknown::ParseDeep(char*, tinyxml2::StrPair*, int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUnknown::ShallowClone(tinyxml2::XMLDocument*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLUnknown::ShallowEqual(tinyxml2::XMLNode const*) const@Base" 8.0.0
+ (c++)"tinyxml2::XMLUnknown::~XMLUnknown()@Base" 8.0.0
+ (c++)"tinyxml2::XMLUnknown::~XMLUnknown()@Base" 8.0.0
+ (c++)"tinyxml2::XMLUnknown::~XMLUnknown()@Base" 8.0.0
+ (c++)"tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ConvertUTF32ToUTF8(unsigned long, char*, int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::GetCharacterRef(char const*, char*, int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ReadBOM(char const*, bool*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::SetBoolSerialization(char const*, char const*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToBool(char const*, bool*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToDouble(char const*, double*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToFloat(char const*, float*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToInt(char const*, int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToStr(bool, char*, int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToStr(double, char*, int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToStr(float, char*, int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToStr(int, char*, int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToStr(unsigned int, char*, int)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::ToUnsigned(char const*, unsigned int*)@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::writeBoolFalse@Base" 8.0.0
+ (c++)"tinyxml2::XMLUtil::writeBoolTrue@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLAttribute@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLComment@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLDeclaration@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLDocument@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLElement@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLNode@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLPrinter@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLText@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLUnknown@Base" 8.0.0
+ (c++)"typeinfo for tinyxml2::XMLVisitor@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLAttribute@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLComment@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLDeclaration@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLDocument@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLElement@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLNode@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLPrinter@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLText@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLUnknown@Base" 8.0.0
+ (c++)"typeinfo name for tinyxml2::XMLVisitor@Base" 8.0.0
+ (c++)"vtable for tinyxml2::XMLAttribute@Base" 8.0.0
+ (c++)"vtable for tinyxml2::XMLComment@Base" 8.0.0
+ (c++)"vtable for tinyxml2::XMLDeclaration@Base" 8.0.0
+ (c++)"vtable for tinyxml2::XMLDocument@Base" 8.0.0
+ (c++)"vtable for tinyxml2::XMLElement@Base" 8.0.0
+ (c++)"vtable for tinyxml2::XMLNode@Base" 8.0.0
+ (c++)"vtable for tinyxml2::XMLPrinter@Base" 8.0.0
+ (c++)"vtable for tinyxml2::XMLText@Base" 8.0.0
+ (c++)"vtable for tinyxml2::XMLUnknown@Base" 8.0.0
