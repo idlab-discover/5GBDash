@@ -33,7 +33,7 @@ If you have any questions or concerns, please feel free to contact us at [casper
 If you use (parts of) this code, please cite the following paper:
 ```bibtex
 @inproceedings{10.1145/3651863.3651880,
-    author = {Haems, Casper and Van Der Hooft, Jeroen and Mareen, Hannes and Steenkiste, Peter and Van Wallendael, Glenn and Wauters, Tim and De Turck, Filip},
+    author = {Haems, Casper and {van der Hooft}, Jeroen and Mareen, Hannes and Steenkiste, Peter and Van Wallendael, Glenn and Wauters, Tim and De Turck, Filip},
     title = {Enabling adaptive and reliable video delivery over hybrid unicast/broadcast networks},
     year = {2024},
     isbn = {9798400706134},
