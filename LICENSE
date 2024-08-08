@@ -1,0 +1,52 @@
+# 5GBDash Project License
+
+MIT License
+
+Copyright (c) 2024 ing. Casper Haems, dr. ir. Jeroen van der Hooft, dr. ir. Hannes Mareen, prof. dr. ir. Peter Steenkiste, prof. dr. ir. Glenn Van Wallendael, dr. ir. Tim Wauters, prof. dr. ir. Filip De Turck
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+# Licenses for Individual Components
+
+## Component: flute
+This component is licensed under the 5G-MAG Public License (v1.0).
+See flute/LICENSE for details.
+
+## Component: flute/external/tinyxml2-debian-9.0.0+dfsg-3.1
+This component is provided 'as-is', without any express or implied warranty.
+See flute/external/tinyxml2-debian-9.0.0+dfsg-3.1/LICENSE.txt for details.
+
+## Component: flute/external/spdlog-1.9.0
+This component is licensed under the MIT License.
+See flute/external/spdlog-1.9.0/LICENSE for details.
+
+## Component: flute/external/spdlog-1.9.0/tests
+This component is licensed under the Boost Software License - Version 1.0.
+See flute/external/spdlog-1.9.0/tests/catch.license for details.
+
+## Component: nalu/NALUProcessing
+This component is licensed under the MIT License.
+See nalu/NALUProcessing/LICENSE for details.
+
+# All other components
+Any other component in this project, not explicitly listed above, falls under the 5GBDash Project License (MIT License), except for any external components or code not originally developed by us. For such external components, the original license terms, if any, apply. In cases where the license is unclear or not provided, users are advised to contact the original authors or maintainers for clarification.
+
