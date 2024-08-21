@@ -25,6 +25,7 @@ set_property( GLOBAL PROPERTY USE_FOLDERS ON )
 # add needed subdirectories
 add_subdirectory( "src/Lib/" )
 add_subdirectory( "src/App/StreamConcat" )
+add_subdirectory( "src/App/StreamInfo" )
 add_subdirectory( "src/App/StreamProcessing" )
 add_subdirectory( "src/App/StreamReducer" )
 

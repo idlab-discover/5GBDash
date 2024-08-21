@@ -43,10 +43,10 @@ else
     cp $4 "${temp_dir}augment.h264"
 fi
 
-# Use ffprobe to extract information about the video stream from the input file "base.h264".
+# Extract information about the video stream from the input file "base.h264".
 # The output is in JSON format and contains information about each frame in the video.
 # The output is then saved to the file "base.json" in the temporary directory.
-ffprobe -i "${temp_dir}base.h264" -v quiet -select_streams v -print_format json -show_frames > "${temp_dir}base.json"
+$script_dir/NALUProcessing/build/src/App/StreamInfo/StreamInfo "${temp_dir}base.h264" 0 > "${temp_dir}base.json"
 
 # Extract from base.json which frame numbers belong to I and P frames (base.json.IP.txt),
 # and which numbers belong to B frames (base.json.B.txt).

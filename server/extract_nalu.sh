@@ -36,7 +36,7 @@ for file in $quality_dir/*_$quality_level.mp4; do
             # The resulting video streams are saved as base.h264 and augment.h264 in the temporary directory.
             ffmpeg -i $temp_dir/base.mp4 -vcodec copy -bsf h264_mp4toannexb -y $temp_dir/base.h264 -hide_banner -loglevel error
             ffmpeg -i $temp_dir/augment.mp4 -vcodec copy -bsf h264_mp4toannexb -y $temp_dir/augment.h264 -hide_banner -loglevel error
-            ffprobe -i $temp_dir/augment.h264 -v quiet -select_streams v -print_format json -show_frames > $temp_dir/base.json
+            ../nalu/NALUProcessing/build/src/App/StreamInfo/StreamInfo "${temp_dir}/augment.h264" 0 > "${temp_dir}/base.json"
 
             # Extract from base.json which frame numbers belong to I and P frames (base.json.IP.txt),
             # and which numbers belong to B frames (base.json.B.txt).

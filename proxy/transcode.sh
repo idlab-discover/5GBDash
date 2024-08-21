@@ -152,11 +152,10 @@ function get_frame_info {
             sleep 0.001 # Sleep for 1 ms to try again
         done
 
-        # Use ffprobe to extract information about the video stream from the input file "base.h264".
+        # Extract information about the video stream from the input file "base.h264".
         # The output is in JSON format and contains information about each frame in the video.
         # The output is then saved to the file "base.json" in the temporary directory.
-        #ffprobe -i "${base_file}" -v quiet -select_streams v -print_format json -show_frames -show_format > "$parent_dir/info/${current_segment}.base.json"
-        ffprobe -i "$base_file" -v quiet -select_streams v -print_format json -show_frames > "$json_file"
+        ../nalu/NALUProcessing/build/src/App/StreamInfo/StreamInfo "$base_file" 0 > "$json_file"
 
         # Unlock the base file
         flock -u $lock_fd_base

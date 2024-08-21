@@ -10,7 +10,7 @@
 void print_help() {
   // clang-format off
   std::cout
-	<< "Usage: StreamProcessing <Source> <Inject> <Output> <TempId|File> [<Codec>]" << std::endl
+	<< "Usage: StreamConcat <Source> <Inject> <Output> <TempId|File> [<Codec>]" << std::endl
   << std::endl
 	<< "    <Source>                       input .264/.265/.266 Annex B stream" << std::endl
 	<< "    <Inject>                       input .264/.265/.266 Annex B stream" << std::endl

@@ -125,6 +125,53 @@ int get_temporal_id(std::vector<uint8_t>::iterator &NALstartinput,
   return 0;
 }
 
+
+int read_ue(std::vector<uint8_t>::iterator &nalstartinput, int &bit_position) {
+    int num_zero_bits = 0;
+    while ((nalstartinput[bit_position / 8] & (1 << (7 - (bit_position % 8)))) == 0) {
+        num_zero_bits++;
+        bit_position++;
+    }
+
+    bit_position++;
+    int value = (1 << num_zero_bits) - 1;
+
+    for (int i = 0; i < num_zero_bits; i++) {
+        value += ((nalstartinput[bit_position / 8] & (1 << (7 - (bit_position % 8)))) != 0) << (num_zero_bits - 1 - i);
+        bit_position++;
+    }
+
+    return value;
+}
+
+PictType slice_type_to_pict_type(int slice_type) {
+    switch (slice_type) {
+        case 0: return PICT_P;
+        case 1: return PICT_B;
+        case 2: return PICT_I;
+        case 3: return PICT_SP;
+        case 4: return PICT_SI;
+        case 5: return PICT_P;  // P-frame (second occurrence)
+        case 6: return PICT_B;  // B-frame (second occurrence)
+        case 7: return PICT_I;  // I-frame (second occurrence)
+        case 8: return PICT_SP; // SP-frame (second occurrence)
+        case 9: return PICT_SI; // SI-frame (second occurrence)
+        default: return PICT_UNKNOWN;
+    }
+}
+
+PictType get_pict_type(std::vector<uint8_t>::iterator &nalstartinput, CodecType codec) {
+    if (codec != CODEC_AVC) {
+        return PICT_UNKNOWN;
+    }
+
+    int bit_position = (nalstartinput[2] == 1) ? 32 : 40; // Start after the NAL header
+    int first_mb_in_slice = read_ue(nalstartinput, bit_position); // Skip first_mb_in_slice
+    int slice_type = read_ue(nalstartinput, bit_position);
+    return slice_type_to_pict_type(slice_type);
+}
+
+
 int vector_to_nalu_vector(std::vector<uint8_t> &vectorbuffer,
                           std::vector<Nalu> &vectornalu, CodecType codec) {
   // iterators to pinpoint the location of individual NALUs while walking
@@ -143,7 +190,15 @@ int vector_to_nalu_vector(std::vector<uint8_t> &vectorbuffer,
       aps_id = get_apsid(nalstartinput1, codec);
     }
     int temp_id = get_temporal_id(nalstartinput1, codec);
-    Nalu current_nalu(type, temp_id, aps_id, nalstartinput1, nalendinput1);
+
+
+    // Determine the picture type if the NALU is a VCL
+    PictType pict_type = PICT_UNKNOWN;
+    if (type == VCL) {
+        pict_type = get_pict_type(nalstartinput1, codec);
+    }
+
+    Nalu current_nalu(type, temp_id, aps_id, pict_type, nalstartinput1, nalendinput1);
     vectornalu.push_back(current_nalu);
     nalstartinput1 = nalendinput1;
     ++nalendinput1;
