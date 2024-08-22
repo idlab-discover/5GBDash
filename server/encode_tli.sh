@@ -86,7 +86,7 @@ for crf in 20 30 51; do
 done
 
 #extract I P B
-ffprobe -i output_20.h264 -v quiet -select_streams v -print_format json -show_frames > output_20.h264.json
+../nalu/NALUProcessing/build/src/App/StreamInfo/StreamInfo "output_20.h264" 0 > "output_20.h264.json"
 python ../nalu/ffprobe_to_naluprocessing.py output_20.h264.json
 > output_25.h264
 > output_35.h264
